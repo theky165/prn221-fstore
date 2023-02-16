@@ -22,8 +22,8 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Vertical" Background="LightBlue" HorizontalAlignment="Left" Width="400">
-            <Label Content="Member Management" Foreground="Red" FontWeight="Bold" FontSize="18"/>
+        <StackPanel Orientation="Vertical" Background="LightBlue" HorizontalAlignment="Left" Width="800">
+            <Label Content="Member Management" HorizontalAlignment="Center" Foreground="Red" FontWeight="Bold" FontSize="18"/>
             <Label Content="Member Id"/>
             <TextBox Name="txtMemId"
                      IsEnabled="False"
@@ -46,20 +46,20 @@
                      DataContext="{Binding ElementName=lvMember, Path=SelectedItem}"
                      Text="{Binding Path=country, Mode=OneWay}"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="1">
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="1">
             <Button Name="btnRefresh" Content="Refresh" Margin="10" Width="80" Height="25"/>
             <Button Name="btnAdd" Content="Add" Margin="10" Width="80" Height="25"/>
             <Button Name="btnEdit" Content="Edit" Margin="10" Width="80" Height="25"/>
             <Button Name="btnDelete" Content="Delete" Margin="10" Width="80" Height="25"/>
         </StackPanel>
-        <ListView Grid.Row="3" Name="lvMember">
+        <ListView Grid.Row="3" Name="lvMember" Width="800">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Member ID" DisplayMemberBinding="{Binding Path=id}"/>
-                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Path=email}"/>
-                    <GridViewColumn Header="Company Name" DisplayMemberBinding="{Binding Path=companyName}"/>
-                    <GridViewColumn Header="City" DisplayMemberBinding="{Binding Path=city}"/>
-                    <GridViewColumn Header="Country" DisplayMemberBinding="{Binding Path=country}"/>
+                    <GridViewColumn Width="150" Header="Member ID" DisplayMemberBinding="{Binding Path=id}"/>
+                    <GridViewColumn Width="150" Header="Email" DisplayMemberBinding="{Binding Path=email}"/>
+                    <GridViewColumn Width="150" Header="Company Name" DisplayMemberBinding="{Binding Path=companyName}"/>
+                    <GridViewColumn Width="150" Header="City" DisplayMemberBinding="{Binding Path=city}"/>
+                    <GridViewColumn Width="150" Header="Country" DisplayMemberBinding="{Binding Path=country}"/>
                 </GridView>
             </ListView.View>
         </ListView>
