@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessObject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,31 @@ namespace SalesWPFApp
     /// </summary>
     public partial class WindowMembers : Window
     {
+        public FstoreContext db;
         public WindowMembers()
         {
             InitializeComponent();
+            db = new FstoreContext();
+        }
+
+        private void LoadData()
+        {
+            var members = db.Members.Select(m => new
+                {
+                    id = m.MemberId,
+                    email = m.Email,
+                    companyName = m.CompanyName,
+                    city = m.City,
+                    country = m.Country,
+                }).ToList();
+
+            // Binding to : lv Employee, cb Dept
+            lvMember.ItemsSource = members;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadData();
         }
     }
 }

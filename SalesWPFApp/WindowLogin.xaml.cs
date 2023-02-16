@@ -23,5 +23,11 @@ namespace SalesWPFApp
         {
             InitializeComponent();
         }
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
+            WindowMembers windowMember = new WindowMembers();
+            windowMember.Show();
+        }
     }
 }
