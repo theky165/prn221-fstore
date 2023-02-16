@@ -1,5 +1,5 @@
 ﻿SalesWPFApp
-1.0.0.0
+
 
 winexe
 C#
@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\FPT_University\Term 8\PRN221\Ass01Solution\SalesWPFApp\App.xaml
-5-1732345773
+21151906203
 
-927290674
+4-2113346259
 194-200944676
-MainWindow.xaml;WindowLogin.xaml;WindowMembers.xaml;WindowOrders.xaml;WindowProducts.xaml;
+MainWindow.xaml;WindowLogin.xaml;
 
-True
+False
 
