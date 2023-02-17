@@ -5,8 +5,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SalesWPFApp"
         mc:Ignorable="d"
-        Title="WindowOrders" Height="450" Width="800">
-    <Grid>
-        
+        Title="WindowOrders" Height="824" Width="800" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Height" Value="25"/>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="0,0,0,-282">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Background="LightBlue" HorizontalAlignment="Left" Width="800">
+            <Label Content="Order Management" HorizontalAlignment="Center" Foreground="Red" FontWeight="Bold" FontSize="18"/>
+            <Label Content="Order Id"/>
+            <TextBox Name="txtOrderId"
+                     IsEnabled="False"
+                     DataContext="{Binding ElementName=lvOrder, Path=SelectedItem}"
+                     Text="{Binding Path=id, Mode=OneWay}"/>
+            <Label Content="Member"/>
+            <ComboBox Name="cbMember"
+                      DisplayMemberPath="email"
+                      SelectedValuePath="id"
+                      Text="{Binding ElementName=lvOrder, Path=SelectedItem.member, Mode=OneWay}"/>
+            <Label Content="Order Date"/>
+            <DatePicker Name="dpOrderDate"
+                        DataContext="{Binding ElementName=lvOrder, Path=SelectedItem}"
+                     Text="{Binding Path=orderDate, Mode=OneWay}"/>
+            <Label Content="Required Date"/>
+            <DatePicker Name="dpRequiredDate"
+                        DataContext="{Binding ElementName=lvOrder, Path=SelectedItem}"
+                     Text="{Binding Path=requiredDate, Mode=OneWay}"/>
+            <Label Content="Shipped Date"/>
+            <DatePicker Name="dpShippedDate"
+                        DataContext="{Binding ElementName=lvOrder, Path=SelectedItem}"
+                     Text="{Binding Path=shippedDate, Mode=OneWay}"/>
+            <TextBox Name="txtFreight"
+                     DataContext="{Binding ElementName=lvOrder, Path=SelectedItem}"
+                     Text="{Binding Path=freight, Mode=OneWay}"/>
+            <Label Content="Country"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="1">
+            <Button Name="btnRefresh" Content="Refresh" Margin="10" Width="80" Height="25" Click="btnRefresh_Click"/>
+            <Button Name="btnAdd" Content="Add" Margin="10" Width="80" Height="25" Click="btnAdd_Click"/>
+            <Button Name="btnEdit" Content="Edit" Margin="10" Width="80" Height="25" Click="btnEdit_Click"/>
+            <Button Name="btnDelete" Content="Delete" Margin="10" Width="80" Height="25" Click="btnDelete_Click"/>
+        </StackPanel>
+        <ListView Grid.Row="3" Name="lvOrder" Width="800">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="100" Header="Order ID" DisplayMemberBinding="{Binding Path=id}"/>
+                    <GridViewColumn Width="120" Header="Member" DisplayMemberBinding="{Binding Path=member}"/>
+                    <GridViewColumn Width="150" Header="Order Date" DisplayMemberBinding="{Binding Path=orderDate}"/>
+                    <GridViewColumn Width="150" Header="Required Date" DisplayMemberBinding="{Binding Path=requiredDate}"/>
+                    <GridViewColumn Width="150" Header="Shipped Date" DisplayMemberBinding="{Binding Path=shippedDate}"/>
+                    <GridViewColumn Width="120" Header="Freight" DisplayMemberBinding="{Binding Path=freight}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
