@@ -141,7 +141,7 @@ namespace SalesWPFApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SalesWPFApp;component/windoworders.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SalesWPFApp;V1.0.0.0;component/windoworders.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\WindowOrders.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

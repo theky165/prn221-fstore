@@ -157,7 +157,7 @@ namespace SalesWPFApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SalesWPFApp;component/windowproducts.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SalesWPFApp;V1.0.0.0;component/windowproducts.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\WindowProducts.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
