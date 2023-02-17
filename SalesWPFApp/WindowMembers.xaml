@@ -42,15 +42,19 @@
                      DataContext="{Binding ElementName=lvMember, Path=SelectedItem}"
                      Text="{Binding Path=city, Mode=OneWay}"/>
             <Label Content="Country"/>
-            <TextBox Name="Country"
+            <TextBox Name="txtCountry"
                      DataContext="{Binding ElementName=lvMember, Path=SelectedItem}"
                      Text="{Binding Path=country, Mode=OneWay}"/>
+            <Label Content="Password"/>
+            <TextBox Name="txtPassword"
+                     DataContext="{Binding ElementName=lvMember, Path=SelectedItem}"
+                     Text="{Binding Path=password, Mode=OneWay}"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="1">
-            <Button Name="btnRefresh" Content="Refresh" Margin="10" Width="80" Height="25"/>
-            <Button Name="btnAdd" Content="Add" Margin="10" Width="80" Height="25"/>
-            <Button Name="btnEdit" Content="Edit" Margin="10" Width="80" Height="25"/>
-            <Button Name="btnDelete" Content="Delete" Margin="10" Width="80" Height="25"/>
+            <Button Name="btnRefresh" Content="Refresh" Margin="10" Width="80" Height="25" Click="btnRefresh_Click"/>
+            <Button Name="btnAdd" Content="Add" Margin="10" Width="80" Height="25" Click="btnAdd_Click"/>
+            <Button Name="btnEdit" Content="Edit" Margin="10" Width="80" Height="25" Click="btnEdit_Click"/>
+            <Button Name="btnDelete" Content="Delete" Margin="10" Width="80" Height="25" Click="btnDelete_Click"/>
         </StackPanel>
         <ListView Grid.Row="3" Name="lvMember" Width="800">
             <ListView.View>

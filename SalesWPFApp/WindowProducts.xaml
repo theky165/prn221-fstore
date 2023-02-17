@@ -5,8 +5,73 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SalesWPFApp"
         mc:Ignorable="d"
-        Title="WindowProducts" Height="450" Width="800">
-    <Grid>
-        
+        Title="WindowProducts" Height="824" Width="800" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Height" Value="25"/>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="0,0,0,-282">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Background="LightBlue" HorizontalAlignment="Left" Width="800">
+            <Label Content="Product Management" HorizontalAlignment="Center" Foreground="Red" FontWeight="Bold" FontSize="18"/>
+            <Label Content="Product Id"/>
+            <TextBox Name="txtProductId"
+                     IsEnabled="False"
+                     DataContext="{Binding ElementName=lvProduct, Path=SelectedItem}"
+                     Text="{Binding Path=id, Mode=OneWay}"/>
+            <Label Content="Category Id"/>
+            <TextBox Name="txtCategoryId"
+                     DataContext="{Binding ElementName=lvProduct, Path=SelectedItem}"
+                     Text="{Binding Path=categoryId, Mode=OneWay}"/>
+            <Label Content="Product Name"/>
+            <TextBox Name="txtProductName"
+                     DataContext="{Binding ElementName=lvProduct, Path=SelectedItem}"
+                     Text="{Binding Path=productName, Mode=OneWay}"/>
+            <Label Content="Weight"/>
+            <TextBox Name="txtWeight"
+                     DataContext="{Binding ElementName=lvProduct, Path=SelectedItem}"
+                     Text="{Binding Path=weight, Mode=OneWay}"/>
+            <Label Content="Unit Price"/>
+            <TextBox Name="txtUnitPrice"
+                     DataContext="{Binding ElementName=lvProduct, Path=SelectedItem}"
+                     Text="{Binding Path=unitPrice, Mode=OneWay}"/>
+            <Label Content="Units In Stock"/>
+            <TextBox Name="txtUnitInStock"
+                     DataContext="{Binding ElementName=lvProduct, Path=SelectedItem}"
+                     Text="{Binding Path=unitsInStock, Mode=OneWay}"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="1">
+            <Button Name="btnRefresh" Content="Refresh" Margin="10" Width="80" Height="25" Click="btnRefresh_Click"/>
+            <Button Name="btnAdd" Content="Add" Margin="10" Width="80" Height="25" Click="btnAdd_Click"/>
+            <Button Name="btnEdit" Content="Edit" Margin="10" Width="80" Height="25" Click="btnEdit_Click"/>
+            <Button Name="btnDelete" Content="Delete" Margin="10" Width="80" Height="25" Click="btnDelete_Click"/>
+        </StackPanel>
+        <StackPanel Margin="0,10,0,10" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label>Enter value:</Label>
+            <TextBox Width="150" Height="25" Name="txtSearch"></TextBox>
+            <Button Width="80" Height="25" Margin="5" Name="btnSearch" Click="btnSearch_Click">Search</Button>
+        </StackPanel>
+        <ListView Grid.Row="3" Name="lvProduct" Width="800">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="120" Header="Product ID" DisplayMemberBinding="{Binding Path=id}"/>
+                    <GridViewColumn Width="120" Header="Category ID" DisplayMemberBinding="{Binding Path=categoryId}"/>
+                    <GridViewColumn Width="120" Header="Product Name" DisplayMemberBinding="{Binding Path=productName}"/>
+                    <GridViewColumn Width="120" Header="Weight" DisplayMemberBinding="{Binding Path=weight}"/>
+                    <GridViewColumn Width="120" Header="Unit Price" DisplayMemberBinding="{Binding Path=unitPrice}"/>
+                    <GridViewColumn Width="120" Header="Units In Stock" DisplayMemberBinding="{Binding Path=unitsInStock}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
