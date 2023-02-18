@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using DataAccess.Repository;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace SalesWPFApp
     public partial class WindowOrders : Window
     {
         FstoreContext db;
+        private IOrderRepository orderRepository;
         public WindowOrders()
         {
             InitializeComponent();
@@ -76,12 +78,8 @@ namespace SalesWPFApp
             o.RequiredDate = (DateTime)dpRequiredDate.SelectedDate;
             o.ShippedDate = (DateTime)dpShippedDate.SelectedDate;
             o.Freight = decimal.Parse(txtFreight.Text);
-            db.Add<Order>(o);
-            if (db.SaveChanges() > 0)
-            {
-                MessageBox.Show("Add successfully!");
-                LoadData();
-            }
+            orderRepository.addOrder(o);
+            LoadData();
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
@@ -95,27 +93,15 @@ namespace SalesWPFApp
                 ShippedDate = dpShippedDate.DisplayDate,
                 Freight = decimal.Parse(txtFreight.Text)
             };
-            db.Update<Order>(o);
-            if (db.SaveChanges() > 0)
-            {
-                MessageBox.Show("Edit success.");
-                LoadData();
-            }
-            else
-            {
-                MessageBox.Show("Edit failed.");
-            }
+            orderRepository.editOrder(o);
+            LoadData();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             Order o = db.Orders.FirstOrDefault(x => x.OrderId == int.Parse(txtOrderId.Text));
-            db.Remove<Order>(o);
-            if (db.SaveChanges() > 0)
-            {
-                MessageBox.Show("Record removed successfully");
-                LoadData();
-            }
+            orderRepository.deleteOrder(o);
+            LoadData();
         }
     }
 }

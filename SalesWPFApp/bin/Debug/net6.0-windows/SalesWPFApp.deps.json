@@ -721,7 +721,6 @@
       },
       "BusinessObject/1.0.0": {
         "dependencies": {
-          "DataAccess": "1.0.0",
           "MaterialDesignColors": "2.1.1",
           "MaterialDesignThemes": "4.7.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
@@ -734,6 +733,7 @@
       },
       "DataAccess/1.0.0": {
         "dependencies": {
+          "BusinessObject": "1.0.0",
           "MaterialDesignColors": "2.1.1",
           "MaterialDesignThemes": "4.7.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",

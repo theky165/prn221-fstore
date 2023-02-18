@@ -12,3 +12,20 @@ D:\FPT_University\Term 8\PRN221\Ass01Solution\DataAccess\obj\Debug\net6.0-window
 D:\FPT_University\Term 8\PRN221\Ass01Solution\DataAccess\obj\Debug\net6.0-windows\DataAccess.pdb
 D:\FPT_University\Term 8\PRN221\Ass01Solution\DataAccess\obj\Debug\net6.0-windows\DataAccess.genruntimeconfig.cache
 D:\FPT_University\Term 8\PRN221\Ass01Solution\DataAccess\obj\Debug\net6.0-windows\ref\DataAccess.dll
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\bin\Debug\net6.0-windows\DataAccess.deps.json
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\bin\Debug\net6.0-windows\DataAccess.runtimeconfig.json
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\bin\Debug\net6.0-windows\DataAccess.dll
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\bin\Debug\net6.0-windows\ref\DataAccess.dll
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\bin\Debug\net6.0-windows\DataAccess.pdb
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.csproj.AssemblyReference.cache
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.AssemblyInfoInputs.cache
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.AssemblyInfo.cs
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.csproj.CoreCompileInputs.cache
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.dll
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\ref\DataAccess.dll
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.pdb
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.genruntimeconfig.cache
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\bin\Debug\net6.0-windows\BusinessObject.dll
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\bin\Debug\net6.0-windows\BusinessObject.pdb
+D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.csproj.CopyComplete
