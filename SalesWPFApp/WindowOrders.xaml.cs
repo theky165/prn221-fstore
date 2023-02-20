@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using DataAccess;
 using DataAccess.Repository;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -24,11 +25,12 @@ namespace SalesWPFApp
     public partial class WindowOrders : Window
     {
         FstoreContext db;
-        private IOrderRepository orderRepository;
+        public IOrderRepository orderRepository;
         public WindowOrders()
         {
             InitializeComponent();
             db = new FstoreContext();
+            orderRepository = new OrderDAO();
         }
 
         public void LoadData()

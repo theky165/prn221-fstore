@@ -10,7 +10,7 @@ using System.Windows;
 
 namespace DataAccess
 {
-    internal class OrderDAO : IOrderRepository
+    public class OrderDAO : IOrderRepository
     {
         public FstoreContext db = new FstoreContext();
 

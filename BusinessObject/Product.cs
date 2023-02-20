@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace BusinessObject;
 
@@ -9,6 +10,7 @@ public partial class Product
 
     public int CategoryId { get; set; }
 
+    [Required(ErrorMessage = "Product Name is required")]
     public string ProductName { get; set; } = null!;
 
     public string Weight { get; set; } = null!;

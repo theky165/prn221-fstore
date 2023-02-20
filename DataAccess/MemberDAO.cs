@@ -13,7 +13,7 @@ using System.Windows.Controls;
 
 namespace DataAccess
 {
-    internal class MemberDAO : IMemberRepository
+    public class MemberDAO : IMemberRepository
     {
         public FstoreContext db = new FstoreContext();
 
@@ -28,7 +28,22 @@ namespace DataAccess
 
         public bool AuthenticateUser(string email, string password)
         {
-            throw new NotImplementedException();
+            if (email != null && password != null)
+            {
+                Member member = db.Members.FirstOrDefault(m => m.Email == email && m.Password == password);
+                if (member == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void deleteMember(Member member)

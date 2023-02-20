@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using DataAccess;
 using DataAccess.Repository;
 using MaterialDesignColors;
 using System;
@@ -29,6 +30,7 @@ namespace SalesWPFApp
         {
             InitializeComponent();
             db = new FstoreContext();
+            productRepository = new ProductDAO();
         }
 
         public void LoadData()

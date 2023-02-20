@@ -10,7 +10,7 @@ using System.Windows.Controls;
 
 namespace DataAccess
 {
-    internal class ProductDAO: IProductRepository
+    public class ProductDAO: IProductRepository
     {
         public FstoreContext db = new FstoreContext();
         public void addProduct(Product product)

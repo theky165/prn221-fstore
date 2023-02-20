@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using DataAccess;
 using DataAccess.Repository;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,7 @@ namespace SalesWPFApp
         {
             InitializeComponent();
             db = new FstoreContext();
+            memberRepository = new MemberDAO();
         }
 
         private void LoadData()

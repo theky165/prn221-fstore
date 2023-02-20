@@ -1,7 +1,9 @@
 ﻿using BusinessObject;
+using DataAccess;
 using DataAccess.Repository;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,10 +23,11 @@ namespace SalesWPFApp
     /// </summary>
     public partial class WindowLogin : Window
     {
-        private IMemberRepository member;
+        private IMemberRepository memberRepository;
         private FstoreContext db = new FstoreContext();
         public WindowLogin()
         {
+            memberRepository = new MemberDAO();
             InitializeComponent();
         }
 
@@ -33,22 +36,14 @@ namespace SalesWPFApp
             string email = tbEmail.Text;
             string password = tbPassword.Password;
 
-            if (email != null && password != null)
+            bool authenLogin = memberRepository.AuthenticateUser(email, password);
+            if (authenLogin)
             {
-                Member member = db.Members.FirstOrDefault(m => m.Email == email && m.Password == password);
-                if (member == null)
-                {
-                    MessageBox.Show("Incorrect email or password!");
-                }
-                else
-                {
-                    MessageBox.Show("Login Success!");
-                    WindowOrders windowOrders = new WindowOrders();
-                    windowOrders.Show();
-                    this.Close();
-                }
-            }
-            else
+                MessageBox.Show("Login Success!");
+                WindowOrders windowOrders = new WindowOrders();
+                windowOrders.Show();
+                this.Close();
+            } else
             {
                 MessageBox.Show("Incorrect email or password!");
             }
