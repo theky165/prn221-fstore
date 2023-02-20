@@ -29,3 +29,20 @@ D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-window
 D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\bin\Debug\net6.0-windows\BusinessObject.dll
 D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\bin\Debug\net6.0-windows\BusinessObject.pdb
 D:\FPT University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.csproj.CopyComplete
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\bin\Debug\net6.0-windows\DataAccess.deps.json
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\bin\Debug\net6.0-windows\DataAccess.runtimeconfig.json
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\bin\Debug\net6.0-windows\DataAccess.dll
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\bin\Debug\net6.0-windows\DataAccess.pdb
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\bin\Debug\net6.0-windows\BusinessObject.dll
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\bin\Debug\net6.0-windows\BusinessObject.pdb
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.csproj.AssemblyReference.cache
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.AssemblyInfoInputs.cache
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.AssemblyInfo.cs
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.csproj.CoreCompileInputs.cache
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.csproj.CopyComplete
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.dll
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\refint\DataAccess.dll
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.pdb
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\DataAccess.genruntimeconfig.cache
+D:\FPT_University\Term 8\PRN221\prn221-fstore\DataAccess\obj\Debug\net6.0-windows\ref\DataAccess.dll

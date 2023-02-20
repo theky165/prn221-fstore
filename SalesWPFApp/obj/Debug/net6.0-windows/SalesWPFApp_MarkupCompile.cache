@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\FPT University\Term 8\PRN221\prn221-fstore\SalesWPFApp\obj\Debug\net6.0-windows\
+D:\FPT_University\Term 8\PRN221\prn221-fstore\SalesWPFApp\obj\Debug\net6.0-windows\
 SalesWPFApp
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\FPT University\Term 8\PRN221\prn221-fstore\SalesWPFApp\App.xaml
+D:\FPT_University\Term 8\PRN221\prn221-fstore\SalesWPFApp\App.xaml
 5-1732345773
 
 7-1968020827
-233-2051960921
+2331280632305
 MainWindow.xaml;WindowLogin.xaml;WindowMembers.xaml;WindowOrders.xaml;WindowProducts.xaml;
 
-True
+False
 

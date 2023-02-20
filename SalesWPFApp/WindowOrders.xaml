@@ -16,11 +16,6 @@
         </Style>
     </Window.Resources>
     <Grid Margin="0,0,0,0" Height="700">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="304*"/>
-            <ColumnDefinition Width="493*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -29,12 +24,9 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Menu HorizontalAlignment = "Left" VerticalAlignment = "Top" Width = "800" Grid.RowSpan="1" Grid.ColumnSpan="3" Height="15">
-            <MenuItem Header = "Member" HorizontalAlignment = "Left" Width = "70" 
-               Click = "MenuItem_Click1" />
-            <MenuItem Header = "Order" HorizontalAlignment = "Left" Width = "70" 
-               Click = "MenuItem_Click1" />
-            <MenuItem Header = "Product" HorizontalAlignment = "Left" Width = "70" 
-               Click = "MenuItem_Click1" />
+            <MenuItem Header = "Member" HorizontalAlignment = "Left" Width = "70" Click="MenuItem_Click" ></MenuItem>
+            <MenuItem Header = "Order" HorizontalAlignment = "Left" Width = "70" Click="MenuItem_Click_1" ></MenuItem>
+            <MenuItem Header = "Product" HorizontalAlignment = "Left" Width = "70" Click="MenuItem_Click_2" ></MenuItem>
         </Menu>
         <StackPanel Orientation="Vertical" Background="LightBlue" HorizontalAlignment="Left" Width="797" Margin="3,20,0,5" Grid.RowSpan="2" Grid.ColumnSpan="3">
             <Label Content="Order Management" HorizontalAlignment="Center" Foreground="Red" FontWeight="Bold" FontSize="18"/>
@@ -65,13 +57,13 @@
                      DataContext="{Binding ElementName=lvOrder, Path=SelectedItem}"
                      Text="{Binding Path=freight, Mode=OneWay}"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Column="1" Margin="199,8,0,24" Width="400" Grid.Row="3" Grid.ColumnSpan="2">
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="2">
             <Button Name="btnRefresh" Content="Refresh" Margin="10" Width="80" Height="25" Click="btnRefresh_Click"/>
             <Button Name="btnAdd" Content="Add" Margin="10" Width="80" Height="25" Click="btnAdd_Click"/>
             <Button Name="btnEdit" Content="Edit" Margin="10" Width="80" Height="25" Click="btnEdit_Click"/>
             <Button Name="btnDelete" Content="Delete" Margin="10" Width="80" Height="25" Click="btnDelete_Click"/>
         </StackPanel>
-        <ListView Grid.Row="2" Name="lvOrder" Grid.ColumnSpan="3" Margin="0,57,0,0" Grid.RowSpan="2">
+        <ListView Grid.Row="3" Name="lvOrder">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="100" Header="Order ID" DisplayMemberBinding="{Binding Path=id}"/>

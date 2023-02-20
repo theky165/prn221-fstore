@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT University\\Term 8\\PRN221\\prn221-fstore\\BusinessObject\\BusinessObject.csproj": {}
+    "D:\\FPT_University\\Term 8\\PRN221\\prn221-fstore\\BusinessObject\\BusinessObject.csproj": {}
   },
   "projects": {
-    "D:\\FPT University\\Term 8\\PRN221\\prn221-fstore\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\FPT_University\\Term 8\\PRN221\\prn221-fstore\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT University\\Term 8\\PRN221\\prn221-fstore\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\FPT_University\\Term 8\\PRN221\\prn221-fstore\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\FPT University\\Term 8\\PRN221\\prn221-fstore\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\Century\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT University\\Term 8\\PRN221\\prn221-fstore\\BusinessObject\\obj\\",
+        "projectPath": "D:\\FPT_University\\Term 8\\PRN221\\prn221-fstore\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\ky.tang\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT_University\\Term 8\\PRN221\\prn221-fstore\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Century\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ky.tang\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows7.0"
+          "net6.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -73,7 +73,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -82,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

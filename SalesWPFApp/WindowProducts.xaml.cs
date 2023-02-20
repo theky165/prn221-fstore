@@ -124,5 +124,26 @@ namespace SalesWPFApp
             
             lvProduct.ItemsSource = productList;
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            WindowMembers windowMembers = new WindowMembers();
+            windowMembers.Show();
+            this.Close();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            WindowOrders windowOrders = new WindowOrders();
+            windowOrders.Show();
+            this.Close();
+        }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            WindowProducts windowProducts = new WindowProducts();
+            windowProducts.Show();
+            this.Close();
+        }
     }
 }
