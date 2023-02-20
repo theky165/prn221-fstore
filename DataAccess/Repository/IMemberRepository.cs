@@ -11,10 +11,8 @@ namespace DataAccess.Repository
     public interface IMemberRepository
     {
         bool AuthenticateUser(string email, string password);
-        void Add(Member Member);
-        void Edit(Member Member);
-        void Remove(int id);
-        Member GetById(int id);
-        IEnumerable<Member> GetByAll();
+        void addMember(Member member);
+        void editMember(Member member);
+        void deleteMember(Member member);
     }
 }

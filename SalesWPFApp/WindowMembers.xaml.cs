@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using DataAccess.Repository;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Metrics;
@@ -22,6 +23,7 @@ namespace SalesWPFApp
     public partial class WindowMembers : Window
     {
         public FstoreContext db;
+        private IMemberRepository memberRepository;
         public WindowMembers()
         {
             InitializeComponent();
@@ -55,12 +57,8 @@ namespace SalesWPFApp
             member.City = txtCity.Text;
             member.Country = txtCountry.Text;
             member.Password = txtPassword.Text;
-            db.Add<Member>(member);
-            if (db.SaveChanges() > 0)
-            {
-                MessageBox.Show("Add successfully!");
-                LoadData();
-            }
+            memberRepository.addMember(member);
+            LoadData();
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
@@ -74,27 +72,15 @@ namespace SalesWPFApp
                 Country = txtCountry.Text,
                 Password = txtPassword.Text,
             };
-            db.Update<Member>(member);
-            if (db.SaveChanges() > 0)
-            {
-                MessageBox.Show("Edit success.");
-                LoadData();
-            }
-            else
-            {
-                MessageBox.Show("Edit failed.");
-            }
+            memberRepository.editMember(member);
+            LoadData();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             Member member = db.Members.FirstOrDefault(x => x.MemberId == int.Parse(txtMemId.Text));
-            db.Remove<Member>(member);
-            if (db.SaveChanges() > 0)
-            {
-                MessageBox.Show("Record removed successfully");
-                LoadData();
-            }
+            memberRepository.deleteMember(member);
+            LoadData();
         }
 
         private void btnRefresh_Click(object sender, RoutedEventArgs e)

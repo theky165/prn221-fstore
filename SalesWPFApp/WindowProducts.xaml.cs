@@ -1,4 +1,6 @@
 ﻿using BusinessObject;
+using DataAccess.Repository;
+using MaterialDesignColors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +24,7 @@ namespace SalesWPFApp
     public partial class WindowProducts : Window
     {
         FstoreContext db;
+        private IProductRepository productRepository;
         public WindowProducts()
         {
             InitializeComponent();
@@ -66,12 +69,8 @@ namespace SalesWPFApp
             p.Weight = txtWeight.Text;
             p.UnitPrice = decimal.Parse(txtUnitPrice.Text);
             p.UnitslnStock = int.Parse(txtUnitInStock.Text);
-            db.Add<Product>(p);
-            if (db.SaveChanges() > 0)
-            {
-                MessageBox.Show("Add successfully!");
-                LoadData();
-            }
+            productRepository.addProduct(p);
+            LoadData();
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
@@ -85,32 +84,21 @@ namespace SalesWPFApp
                 UnitPrice = decimal.Parse(txtUnitPrice.Text),
                 UnitslnStock = int.Parse(txtUnitInStock.Text),
             };
-            db.Update<Product>(p);
-            if (db.SaveChanges() > 0)
-            {
-                MessageBox.Show("Edit success.");
-                LoadData();
-            }
-            else
-            {
-                MessageBox.Show("Edit failed.");
-            }
+            productRepository.editProduct(p);
+            LoadData();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             Product product = db.Products.FirstOrDefault(x => x.ProductId == int.Parse(txtProductId.Text));
-            db.Remove<Product>(product);
-            if (db.SaveChanges() > 0)
-            {
-                MessageBox.Show("Record removed successfully");
-                LoadData();
-            }
+            productRepository.deleteProduct(product);
+            LoadData();
         }
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
             string searchValue = txtSearch.Text.ToLower();
+
             var productList = db.Products.Select(p => new
             {
                 id = p.ProductId,
@@ -118,10 +106,14 @@ namespace SalesWPFApp
                 productName = p.ProductName,
                 weight = p.Weight,
                 unitPrice = p.UnitPrice,
-                unitsInStock = p.UnitslnStock,
+                unitsInStock = p.UnitslnStock
             }).Where(p =>
-            p.productName.ToLower().Contains(searchValue)).ToList();
-            
+                p.id.ToString().Equals(searchValue) ||
+                p.unitPrice.ToString().Equals(searchValue) ||
+                p.unitsInStock.ToString().Equals(searchValue) ||
+                p.productName.ToLower().Contains(searchValue))
+         .ToList();
+
             lvProduct.ItemsSource = productList;
         }
 
