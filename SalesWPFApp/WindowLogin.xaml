@@ -12,7 +12,7 @@
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="220,168,0,0" Name="textBlock2" Text="Password" VerticalAlignment="Top" Width="77" />
         <TextBox Height="23" HorizontalAlignment="Center" Margin="50,115,0,0" Name="tbEmail" VerticalAlignment="Top" Width="247" />
         <PasswordBox Height="23" HorizontalAlignment="Center" Margin="50,168,0,0" Name="tbPassword" VerticalAlignment="Top" Width="247" />
-        <Button Content="Login" Height="23" HorizontalAlignment="Center" Margin="0,220,0,0" Name="loginButton" VerticalAlignment="Top" Width="104" Click="loginButton_Click"/>
+        <Button Content="Login" Height="30" HorizontalAlignment="Center" Margin="0,220,0,0" Name="loginButton" VerticalAlignment="Top" Width="104" Click="loginButton_Click"/>
         <TextBlock Height="23" HorizontalAlignment="Center" x:Name ="errormessage" VerticalAlignment="Top" Width="247" Margin="118,253,0,0"  OpacityMask="Crimson" Foreground="#FFE5572C"  />
     </Grid>
 </Window>
