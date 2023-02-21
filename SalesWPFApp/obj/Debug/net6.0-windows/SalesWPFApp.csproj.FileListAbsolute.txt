@@ -257,3 +257,4 @@ D:\FPT_University\Term 8\PRN221\prn221-fstore\SalesWPFApp\obj\Debug\net6.0-windo
 D:\FPT_University\Term 8\PRN221\prn221-fstore\SalesWPFApp\obj\Debug\net6.0-windows\SalesWPFApp.genruntimeconfig.cache
 D:\FPT_University\Term 8\PRN221\prn221-fstore\SalesWPFApp\obj\Debug\net6.0-windows\ref\SalesWPFApp.dll
 D:\FPT_University\Term 8\PRN221\prn221-fstore\SalesWPFApp\obj\Debug\net6.0-windows\App.baml
+D:\FPT_University\Term 8\PRN221\prn221-fstore\SalesWPFApp\bin\Debug\net6.0-windows\appsettings.json
